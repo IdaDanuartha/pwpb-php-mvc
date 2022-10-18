@@ -18,10 +18,9 @@
         </div>
     </div>
 
-    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+    <canvas class="my-5 w-100" id="myChart" width="900" height="380"></canvas>
 
-    <h2 class="fw-semibold mb-4">Selamat Datang <?= isset($data['company']) ? $data['company'] : "" ?></h2>
-    <h6>Berikut data user saat ini:</h6>
+    <h4 class="fw-semibold mb-4">Data Pengguna</h2>
     <div class="table-responsive text-center">
         <table class="table table-striped table-sm">
             <thead>

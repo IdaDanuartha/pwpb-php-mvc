@@ -4,7 +4,12 @@ class User extends Controller {
 
     public function registerView()
     {
-        $_SESSION['isLogged'] = false;
+        if($_SESSION['isLogged']) {
+            $_SESSION['isLogged'] = true;
+        } else {
+            $_SESSION['isLogged'] = false;
+        }
+
         if(!$_SESSION['isLogged']) {
             $data['title'] = 'Login';
             $data['message'] = '';
@@ -13,11 +18,17 @@ class User extends Controller {
         } else {
             header('Location: ' . BASE_URL);
         }
+        $_SESSION['isLogged'] = false;
     }
 
     public function loginView()
     {
-        $_SESSION['isLogged'] = false;
+        if($_SESSION['isLogged']) {
+            $_SESSION['isLogged'] = true;
+        } else {
+            $_SESSION['isLogged'] = false;
+        }
+        
         if(!$_SESSION['isLogged']) {
             $data['title'] = 'Login';
             $data['message'] = '';

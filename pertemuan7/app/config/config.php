@@ -1,5 +1,7 @@
 <?php
+$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+define('URL', $url);
 define('BASE_URL', 'http://localhost:8080/pwpb-project/pertemuan7/public');
 
 // Database Creds
